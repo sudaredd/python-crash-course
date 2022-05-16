@@ -8,6 +8,38 @@ def main(args):
     modify()
     add_insert()
     remove()
+    sort()
+    reverse()
+    loop()
+
+def loop():
+    print("==========================loop starts==========================")
+    
+    magicians = ['alice', 'david', 'carolina']
+    
+    for magician in magicians:
+        print (magician.title() + ", that was a great trick");
+        print("I can't wait for your next trick, "+magician.title() + ".\n")
+    
+    print("==========================loop ends==========================")
+def reverse(): 
+    print('-------------Reverse starts---------------------------')
+    cars = ['bmw', 'audi', 'toyota', 'subaru']
+    print(cars)
+    cars.reverse()
+    print(cars)
+    print('-------------Reverse ends---------------------------')
+
+def sort():
+    print('-------------Sort starts---------------------------')
+    cars = ['bmw', 'audi', 'toyota', 'subaru']
+    cars.sort()
+    print(cars)
+    cars.sort(reverse=True)
+    print("reverse sort=>"+str(cars))
+    cars = ['bmw', 'audi', 'toyota', 'subaru']
+    print(sorted(cars, reverse=True))
+    print('-------------Sort ends---------------------------')
 
 def modify():
     motorcycles = ['honda', 'yamaha', 'suzuki']
