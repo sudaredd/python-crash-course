@@ -6,15 +6,24 @@ def print_aliens(aliens):
         print(alien)
 
 def make_30_aliens():
-    aliens = []
-    for alien_number in range(30):
-        new_alien = {'color': 'green', 'points': 5, 'speed': 'slow', 'number':alien_number}
-        aliens.append(new_alien)
+    aliens = get_aliens(30)
+    for alien in aliens[0:3]:
+        if alien['color'] == 'green':
+            alien['color'] = 'yellow'
+            alien['points'] = 10
+    
     #show first 5 aliens
     for al in aliens[:5]:
         print(al)
     #show number of aliens created
     print("Total number of aliens created "+str(len(aliens)))
+
+def get_aliens(count):
+    aliens = []
+    for alien_number in range(count):
+        new_alien = {'color': 'green', 'points': 5, 'speed': 'slow', 'number':alien_number}
+        aliens.append(new_alien)
+    return aliens
     
 alien_0 = {'color': 'green', 'points': 5}
 alien_1 = {'color': 'yellow', 'points': 10}
