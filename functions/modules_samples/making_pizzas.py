@@ -1,4 +1,4 @@
-"""We can import 3 ways as below
+"""We can import as below
 1. import module
 2. import specific functions from module
 3. alias
